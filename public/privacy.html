@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>隐私政策 — Elvin</title>
+    <meta name="description" content="Elvin 个人作品集网站隐私政策" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500&family=DM+Serif+Display:ital@0;1&family=Noto+Sans+SC:wght@300;400&display=swap" rel="stylesheet" />
+    <style>
+      *, *::before, *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --bg: #f5f5f0;
+        --surface: #ffffff;
+        --text-primary: #1a1a1a;
+        --text-secondary: #6b6b6b;
+        --text-tertiary: #9b9b9b;
+        --accent: #1a1a1a;
+        --border: rgba(0,0,0,0.08);
+        --divider: rgba(0,0,0,0.06);
+      }
+
+      html {
+        font-size: 16px;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background-color: var(--bg);
+        color: var(--text-primary);
+        font-family: 'Noto Sans SC', -apple-system, sans-serif;
+        font-weight: 300;
+        line-height: 1.8;
+        min-height: 100vh;
+      }
+
+      /* ── Header ── */
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: rgba(245, 245, 240, 0.85);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-bottom: 1px solid var(--divider);
+        padding: 0 max(24px, 5vw);
+      }
+
+      .header-inner {
+        max-width: 860px;
+        margin: 0 auto;
+        height: 52px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .site-name {
+        font-family: 'DM Serif Display', serif;
+        font-size: 1.1rem;
+        letter-spacing: 0.02em;
+        color: var(--text-primary);
+        text-decoration: none;
+        opacity: 0.9;
+      }
+
+      .back-link {
+        font-size: 0.78rem;
+        color: var(--text-secondary);
+        text-decoration: none;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        transition: color 0.2s;
+      }
+
+      .back-link:hover { color: var(--text-primary); }
+
+      .back-link::before {
+        content: '←';
+        font-size: 0.9em;
+      }
+
+      /* ── Main ── */
+      main {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 72px max(24px, 5vw) 120px;
+      }
+
+      /* ── Hero ── */
+      .hero {
+        padding-bottom: 56px;
+        border-bottom: 1px solid var(--border);
+        margin-bottom: 64px;
+        opacity: 0;
+        transform: translateY(16px);
+        animation: fadeUp 0.7s ease forwards;
+      }
+
+      .hero-label {
+        font-size: 0.72rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--text-tertiary);
+        margin-bottom: 20px;
+      }
+
+      .hero h1 {
+        font-family: 'DM Serif Display', serif;
+        font-size: clamp(2.6rem, 6vw, 4.2rem);
+        font-weight: 400;
+        line-height: 1.1;
+        letter-spacing: -0.01em;
+        color: var(--text-primary);
+        margin-bottom: 28px;
+      }
+
+      .hero h1 em {
+        font-style: italic;
+        color: var(--text-secondary);
+      }
+
+      .hero-meta {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        font-size: 0.82rem;
+        color: var(--text-tertiary);
+        letter-spacing: 0.02em;
+      }
+
+      .hero-meta span {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .dot {
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        background: var(--text-tertiary);
+        opacity: 0.5;
+      }
+
+      /* ── Intro card ── */
+      .intro-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 32px 36px;
+        margin-bottom: 64px;
+        opacity: 0;
+        animation: fadeUp 0.7s ease 0.15s forwards;
+      }
+
+      .intro-card p {
+        font-size: 1.05rem;
+        color: var(--text-secondary);
+        line-height: 1.85;
+        font-family: 'Noto Serif SC', serif;
+        font-weight: 300;
+      }
+
+      /* ── Sections ── */
+      .sections {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+
+      .section {
+        padding: 48px 0;
+        border-bottom: 1px solid var(--divider);
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        gap: 32px 48px;
+        opacity: 0;
+        animation: fadeUp 0.6s ease forwards;
+      }
+
+      .section:last-child { border-bottom: none; }
+
+      .section-label {
+        padding-top: 4px;
+      }
+
+      .section-number {
+        font-size: 0.68rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--text-tertiary);
+        margin-bottom: 8px;
+      }
+
+      .section h2 {
+        font-family: 'DM Serif Display', serif;
+        font-size: 1.05rem;
+        font-weight: 400;
+        color: var(--text-primary);
+        line-height: 1.4;
+      }
+
+      .section-body p {
+        font-size: 0.93rem;
+        color: var(--text-secondary);
+        line-height: 1.9;
+        margin-bottom: 16px;
+      }
+
+      .section-body p:last-child { margin-bottom: 0; }
+
+      .section-body ul {
+        list-style: none;
+        margin: 16px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .section-body ul li {
+        font-size: 0.93rem;
+        color: var(--text-secondary);
+        line-height: 1.7;
+        padding-left: 18px;
+        position: relative;
+      }
+
+      .section-body ul li::before {
+        content: '–';
+        position: absolute;
+        left: 0;
+        color: var(--text-tertiary);
+      }
+
+      .highlight-box {
+        background: var(--bg);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 20px 24px;
+        margin: 20px 0;
+        font-size: 0.88rem;
+        color: var(--text-secondary);
+        line-height: 1.8;
+      }
+
+      .highlight-box strong {
+        color: var(--text-primary);
+        font-weight: 400;
+      }
+
+      /* ── Footer ── */
+      footer {
+        margin-top: 80px;
+        padding-top: 40px;
+        border-top: 1px solid var(--divider);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 16px;
+        opacity: 0;
+        animation: fadeUp 0.6s ease 0.5s forwards;
+      }
+
+      footer p {
+        font-size: 0.78rem;
+        color: var(--text-tertiary);
+        letter-spacing: 0.02em;
+      }
+
+      footer a {
+        color: var(--text-secondary);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+
+      footer a:hover { color: var(--text-primary); }
+
+      /* ── Animation ── */
+      @keyframes fadeUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .section:nth-child(1) { animation-delay: 0.2s; }
+      .section:nth-child(2) { animation-delay: 0.28s; }
+      .section:nth-child(3) { animation-delay: 0.36s; }
+      .section:nth-child(4) { animation-delay: 0.44s; }
+      .section:nth-child(5) { animation-delay: 0.52s; }
+
+      /* ── Responsive ── */
+      @media (max-width: 640px) {
+        .section {
+          grid-template-columns: 1fr;
+          gap: 16px;
+        }
+
+        .section-label {
+          padding-top: 0;
+          display: flex;
+          align-items: baseline;
+          gap: 12px;
+        }
+
+        .section-number {
+          margin-bottom: 0;
+        }
+
+        .hero h1 { font-size: 2.4rem; }
+
+        .intro-card { padding: 24px; }
+      }
+    </style>
+  </head>
+  <body>
+
+    <header>
+      <div class="header-inner">
+        <a href="/" class="site-name">Elvin</a>
+        <a href="/" class="back-link">返回首页</a>
+      </div>
+    </header>
+
+    <main>
+
+      <div class="hero">
+        <p class="hero-label">Legal</p>
+        <h1>隐私<em>政策</em></h1>
+        <div class="hero-meta">
+          <span>最后更新：2026 年 3 月</span>
+          <div class="dot"></div>
+          <span>elvin.me</span>
+        </div>
+      </div>
+
+      <div class="intro-card">
+        <p>
+          本隐私政策说明了在您访问本个人作品集网站时，我们如何处理与您相关的信息。
+          本网站以展示个人作品与联系方式为主要目的，不涉及账户注册、用户数据库或商业交易，因此数据处理极为简单。
+        </p>
+      </div>
+
+      <div class="sections">
+
+        <div class="section">
+          <div class="section-label">
+            <p class="section-number">01</p>
+            <h2>我们收集的信息</h2>
+          </div>
+          <div class="section-body">
+            <p>
+              本网站本身<strong>不主动收集任何个人信息</strong>。您浏览本网站时无需注册账户，也无需提供任何个人资料。
+            </p>
+            <p>以下是可能涉及数据的情形：</p>
+            <ul>
+              <li><strong>服务器日志</strong>：托管服务商（Cloudflare Pages）会自动记录访问日志，包括 IP 地址、访问时间、浏览器类型等标准 HTTP 请求信息，用于运营维护目的。</li>
+              <li><strong>联系方式</strong>：如果您通过页面上列出的邮件、社交媒体等渠道主动与我联系，您所发送的内容将由对应平台处理。</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-label">
+            <p class="section-number">02</p>
+            <h2>Cookie 与追踪</h2>
+          </div>
+          <div class="section-body">
+            <p>
+              本网站<strong>不使用任何追踪 Cookie</strong>，不部署第三方分析脚本（如 Google Analytics），不进行用户行为追踪，也不展示任何广告。
+            </p>
+            <div class="highlight-box">
+              <strong>简而言之</strong>：没有 Cookie 弹窗，没有追踪器，没有广告。您的浏览行为完全保留在您自己这里。
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-label">
+            <p class="section-number">03</p>
+            <h2>第三方服务</h2>
+          </div>
+          <div class="section-body">
+            <p>本网站使用以下第三方服务，它们可能有各自的隐私政策：</p>
+            <ul>
+              <li><strong>Cloudflare Pages</strong>：网站托管与 CDN 加速。Cloudflare 可能会处理访问日志以保障服务质量与安全。</li>
+              <li><strong>Google Fonts</strong>：字体加载可能涉及向 Google 服务器发出请求。</li>
+            </ul>
+            <p>
+              除此之外，页面上显示的社交媒体链接（X、YouTube、Bilibili、微信、Telegram 等）将引导您前往对应平台，届时适用各平台自身的隐私政策。
+            </p>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-label">
+            <p class="section-number">04</p>
+            <h2>数据安全</h2>
+          </div>
+          <div class="section-body">
+            <p>
+              本网站通过 HTTPS 提供服务，所有传输数据均经过加密。由于本站不存储任何用户数据，也就不存在用户数据泄露的风险。
+            </p>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-label">
+            <p class="section-number">05</p>
+            <h2>政策变更与联系</h2>
+          </div>
+          <div class="section-body">
+            <p>
+              如本隐私政策有所更新，将在本页面修订「最后更新」日期。如您对本政策有任何疑问，欢迎通过页面上的联系方式与我沟通。
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="section">
+        <div class="section-label">
+          <p class="section-number">06</p>
+          <h2>二级页面：威尼斯</h2>
+        </div>
+        <div class="section-body">
+          <p>这是隐私政策的子页面示例，你可以在这里放置与“威尼斯”相关的补充内容或详细说明。</p>
+          <p>点击下面的链接访问该页面：</p>
+          <p><a href="/venice.html">前往威尼斯页面（二级页面）</a></p>
+        </div>
+      </div>
+
+      <footer>
+        <p>© 2026 Elvin. 保留所有权利。</p>
+        <p><a href="/">← 返回首页</a></p>
+      </footer>
+
+    </main>
+
+  </body>
+</html>

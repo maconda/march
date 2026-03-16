@@ -5,8 +5,45 @@
 }
 
 body {
-  background: radial-gradient(circle at top, #1f2937, #0b1220);
-  color: #f8fafc;
+  background: radial-gradient(circle at top, #fff8f0 0%, #f4d9b4 35%, #b58c6d 70%, #2a2733 100%);
+  color: #1a1a1a;
+}
+
+.section {
+  position: relative;
+  overflow: hidden;
+  padding: 4rem 0;
+  border-radius: 2rem;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 22px 40px rgba(0, 0, 0, 0.14);
+  margin: 2rem 0;
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  inset: -15% 0 60%;
+  background: radial-gradient(circle at 30% 10%, rgba(255, 255, 255, 0.36), transparent 54%);
+  filter: blur(32px);
+  transform: translateX(-20%) rotate(8deg);
+  opacity: 0.9;
+}
+
+.section::after {
+  content: "";
+  position: absolute;
+  inset: -15% 0 60%;
+  background: radial-gradient(circle at 70% 20%, rgba(255, 255, 255, 0.18), transparent 62%);
+  filter: blur(40px);
+  transform: translateX(20%) rotate(-12deg);
+  opacity: 0.7;
+}
+
+.section > * {
+  position: relative;
+  z-index: 1;
 }
 
 .header {
@@ -53,6 +90,7 @@ body {
   padding-bottom: 4rem;
 }
 
+<<<<<<< HEAD
 .section {
   padding: 4rem 0;
   border-bottom: 1px solid rgba(226, 232, 240, 0.08);
@@ -62,11 +100,21 @@ body {
   font-size: 2rem;
   margin-bottom: 1.25rem;
   color: #f1f5f9;
+=======
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.25rem;
+  color: #1a1a1a;
+>>>>>>> f6e4f22 (chore: initial commit)
 }
 
 .section p {
   line-height: 1.75;
+<<<<<<< HEAD
   color: rgba(226, 232, 240, 0.85);
+=======
+  color: rgba(26, 26, 26, 0.76);
+>>>>>>> f6e4f22 (chore: initial commit)
 }
 
 .section ul {
