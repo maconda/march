@@ -216,16 +216,11 @@ export default function App() {
             </div>
             <div className="space-y-6">
               {[
-<<<<<<< HEAD
-                { q: "How do you start a design project?", a: "I always start with research and understanding the user's pain points." },
-                { q: "What's your favorite coding language?", a: "TypeScript, for its balance of flexibility and safety." },
-=======
                 { q: "什么是 TCP/IP 协议？", a: "TCP/IP 是一组网络通信协议，用于在互联网上可靠地传输数据，其中 TCP 负责数据传输可靠性，IP 负责分组寻址和路由。" },
                 { q: "计算机内存和存储有什么区别？", a: "内存（RAM）是运行时的临时存储，用于存放当前程序和数据；存储（如 SSD/硬盘）用于长期保存文件和系统数据。" },
                 { q: "为什么需要 DNS？", a: "DNS 将易记的域名（如 example.com）解析为 IP 地址，使浏览器能够找到对应的服务器。" },
                 { q: "什么是防火墙，它的作用是什么？", a: "防火墙是用于监控和过滤网络流量的安全设备或软件，防止未经授权的访问并保护内部网络。" },
                 { q: "如何提高 Wi-Fi 网络的稳定性？", a: "可以选择拥挤较少的频道、靠近路由器、更新固件以及减少无线干扰来提升稳定性。" },
->>>>>>> f6e4f22 (chore: initial commit)
               ].map((item, i) => (
                 <div key={i} className="bg-[#faf9f6] p-6 rounded-2xl border border-zinc-200/50">
                   <h4 className="font-semibold text-zinc-900 mb-2">Q: {item.q}</h4>
@@ -298,11 +293,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-sm">{t.footer.copy}</p>
           <div className="flex gap-8 text-xs uppercase tracking-widest font-semibold">
-<<<<<<< HEAD
-            <a href="#" className="hover:text-white transition-colors">{t.footer.privacy}</a>
-=======
             <a href="/privacy.html" className="hover:text-white transition-colors">{t.footer.privacy}</a>
->>>>>>> f6e4f22 (chore: initial commit)
             <a href="#" className="hover:text-white transition-colors">{t.footer.terms}</a>
             <a href="#" className="hover:text-white transition-colors">{t.footer.colophon}</a>
           </div>

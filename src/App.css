@@ -90,31 +90,15 @@ body {
   padding-bottom: 4rem;
 }
 
-<<<<<<< HEAD
-.section {
-  padding: 4rem 0;
-  border-bottom: 1px solid rgba(226, 232, 240, 0.08);
-}
-
-.section h2 {
-  font-size: 2rem;
-  margin-bottom: 1.25rem;
-  color: #f1f5f9;
-=======
 .section h2 {
   font-size: 2rem;
   margin-bottom: 1.25rem;
   color: #1a1a1a;
->>>>>>> f6e4f22 (chore: initial commit)
 }
 
 .section p {
   line-height: 1.75;
-<<<<<<< HEAD
-  color: rgba(226, 232, 240, 0.85);
-=======
   color: rgba(26, 26, 26, 0.76);
->>>>>>> f6e4f22 (chore: initial commit)
 }
 
 .section ul {
